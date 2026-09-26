@@ -44,13 +44,41 @@
             <a href="mailto: info@katahd.corp">
                 Contact Us
             </a>
+
         </section>
+        <section class="section">
+    <div class="container join-grid">
+         <section class="form-panel" aria-labelledby="join-form-title">
+        <h2 id="join-form-title">Adventure interest form</h2>
+        <!-- TODO 4: The form structure is provided. Complete the missing option labels and placeholders. -->
+        <form>
+          <div class="form-row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name"></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
+          </div>
+          <div class="field">
+            <label for="activity">Activity</label>
+            <select id="activity" name="activity">
+              <option>Choose one</option>
+              <option>Trail Hike</option>
+              <option>Lake Paddle</option>
+              <option>Campfire Night</option>
+            </select>
+          </div>
+          <div class="field"><label for="message">What would make you feel prepared?</label><textarea id="message" name="message" placeholder="Tell us about your experience level or questions..."></textarea></div>
+          <button class="button" type="button">Send interest</button>
+        </form>
+      </section>
+    </section>
     </main>
-    <footer>
-        <p>
-            &copy; 2026 Katahdin Trail & Paddle.
-            All rights reserved
-        </p>
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p> <strong>
+                &copy; 2026 Katahdin Trail & Paddle.
+                All rights reserved
+                <p>Explore locally. Adventure responsibly.</p>
+            </p>
+        </div>
     </footer>
 </body>
 
