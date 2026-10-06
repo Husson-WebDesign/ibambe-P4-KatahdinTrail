@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Website Project</title>
+    <title>Contact Katahdin Trail & Paddle</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="contact-page">
     <header class="site-header">
         <div class="container nav-wrap">
             <a class="brand" href="index.html">
@@ -29,55 +29,54 @@
             </nav>
        </div>
     </header>
-    <main>
+    <main class="contact-content">
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>
-                Reach out about equipment rentals, a guided trip, or any questions about our services and accommodation.
-                Our team will help you find the right fit.
-            </p>
-            <h4>Contact</h4>
-            <p>Location: Millinocket and Katahdin Region, Maine</p>
-            <p>Operating hours: Monday-Sunday: 7:00 AM-6:00 PM</p>
-            <p>Call Us: +1(207)264-9373</p>
-            <p>Email Us: katahd@contact.corp</p>
-            <a href="mailto: info@katahd.corp">
-                Contact Us
-            </a>
-
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>
+                    Reach out about equipment rentals, a guided trip, or any questions about our services and accommodation.
+                    Our team will help you find the right fit.
+                </p>
+                <h4>Contact Information</h4>
+                <p>Location: Millinocket and Katahdin Region, Maine</p>
+                <p>Operating hours: Monday-Sunday: 7:00 AM-6:00 PM</p>
+                <p>Call Us: +1(207)264-9373</p>
+                <p>Email Us: katahd@contact.corp</p>
+                <a href="mailto:katahd@contact.corp">
+                    Contact Us
+                </a>
+            </div>
         </section>
         <section class="section">
-    <div class="container join-grid">
-         <section class="form-panel" aria-labelledby="join-form-title">
-        <h2 id="join-form-title">Adventure interest form</h2>
-        <!-- TODO 4: The form structure is provided. Complete the missing option labels and placeholders. -->
-        <form>
-          <div class="form-row">
-            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name"></div>
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
-          </div>
-          <div class="field">
-            <label for="activity">Activity</label>
-            <select id="activity" name="activity">
-              <option>Choose one</option>
-              <option>Trail Hike</option>
-              <option>Lake Paddle</option>
-              <option>Campfire Night</option>
-            </select>
-          </div>
-          <div class="field"><label for="message">What would make you feel prepared?</label><textarea id="message" name="message" placeholder="Tell us about your experience level or questions..."></textarea></div>
-          <button class="button" type="button">Send interest</button>
-        </form>
+            <div class="container join-grid">
+                <section class="form-panel" aria-labelledby="join-form-title">
+                <h2 id="join-form-title">Adventure interest form</h2>
+                <form>
+                <div class="form-row">
+                    <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name"></div>
+                    <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
+                </div>
+                <div class="field">
+                    <label for="activity">Activity</label>
+                    <select id="activity" name="activity">
+                    <option value=" " disabled selected>Choose one</option>
+                    <option>Trail Hike</option>
+                    <option>Lake Paddle</option>
+                    <option>Campfire Night</option>
+                    </select>
+                </div>
+                <div class="field"><label for="message">What would make you feel prepared?</label><textarea id="message" name="message" placeholder="Tell us about your experience level or questions..."></textarea></div>
+                <button class="button" type="submit">Send interest</button>
+                </form>
+            </div>
       </section>
-    </section>
     </main>
     <footer class="site-footer">
         <div class="container footer-wrap">
             <p> <strong>
-                &copy; 2026 Katahdin Trail & Paddle.
-                All rights reserved
-                <p>Explore locally. Adventure responsibly.</p>
-            </p>
+                &copy; 2026 Katahdin Trail &amp; Paddle.
+                All rights reserved</strong></p>
+            <p>Explore locally. Adventure responsibly.</p>
         </div>
     </footer>
 </body>
