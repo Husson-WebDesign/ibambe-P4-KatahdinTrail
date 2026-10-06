@@ -25,8 +25,8 @@ This project will eventually use:
 ## Project Status
 
 - [x] Lab 0 - Development Environment Setup
-- [] Lab 1 - HTML Structure
-- [ ] Lab 2 - CSS Design
+- [x] Lab 1 - HTML Structure
+- [x] Lab 2 - CSS Design
 - [ ] Responsive Design
 - [ ] JavaScript
 - [ ] Final Client Website
