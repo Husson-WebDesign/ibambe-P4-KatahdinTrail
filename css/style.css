@@ -45,7 +45,15 @@ ul { list-style-type: none; padding: 0; margin: 0; display: flex; flex-direction
 .site-nav a { text-decoration: none; padding: 9px 13px; border-radius: 999px; font-weight: 700; font-size: .95rem; white-space: nowrap; }
 .site-nav a:hover, .site-nav a.active { background: var(--accent-color); color: white; }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 2rem;}
-
+.menu-toggle {
+    display: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: var(--text-color);
+    color: white;
+    font: inherit;
+    font-weight: 800;
+}
 
 .hero {
     position: relative;
@@ -292,6 +300,25 @@ textarea.invalid { border: 2px solid #B00020; }
     h1 { font-size: 2rem; }
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.25rem; }
+    .menu-toggle { display: inline-block; }
+     .site-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .site-nav.open { display: flex; }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .5rem;
+        width: 100%;
+        margin-top: 0;
+        padding-bottom: 10px;
+    }
+
+    .site-nav a { text-align: center; }
+
     .hero h1, .hero-about h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
     .hero { padding: 40px auto; height: 100%;}
     .hero-about { padding: 32px 0 24px; }
