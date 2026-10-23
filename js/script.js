@@ -38,7 +38,7 @@ if (contactForm) {
             showError(emailInput, "Please enter your email address.");
             return false;
         } else if (!emailPattern.test(email)) {
-            showError(emailInput, "Please enter a valid email address, like you@example.com.");
+            showError(emailInput, "Please enter a valid email address.");
             return false;
         }
         clearError(emailInput);
@@ -54,7 +54,7 @@ if (contactForm) {
         return true;
     }
 
-    // Once a field has an error, re-check it as the visitor fixes it
+
     nameInput.addEventListener("input", function () {
         if (nameInput.hasAttribute("aria-invalid")) validateName();
     });
@@ -75,8 +75,33 @@ if (contactForm) {
             contactForm.querySelector("[aria-invalid]").focus();
         } else {
             formSuccess.textContent =
-                "Thank you. This is a demonstration, so your message was not actually sent.";
+                "Thank you for your submission!";
             contactForm.reset();
         }
     });
 };
+
+
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#main-navigation");
+ 
+function setMenuState(isOpen) {
+    navigation.classList.toggle("open", isOpen);
+    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.textContent = isOpen ? "Close" : "Menu";
+}
+ 
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", function () {
+        setMenuState(!navigation.classList.contains("open"));
+    });
+ 
+    // Escape closes the menu and returns focus to the button
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && navigation.classList.contains("open")) {
+            setMenuState(false);
+            menuButton.focus();
+        }
+    });
+}
+console.log(document.querySelector(".menu-toggle"), document.querySelector("#main-navigation"));
