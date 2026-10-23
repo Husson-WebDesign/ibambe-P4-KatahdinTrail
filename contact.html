@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
         <script src="js/script.js" defer></script>
+</head>
 <body class="contact-page">
     <header class="site-header">
         <div class="container nav-wrap">
@@ -20,7 +21,7 @@
                 <button class="menu-toggle" type="button"
             aria-expanded="false"
             aria-controls="main-navigation">Menu</button>
-            <nav class="site-nav">
+            <nav class="site-nav" id="main-navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -29,7 +30,7 @@
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
-       </div>
+    </div>
     </header>
     <main class="contact-content">
         <section id="contact">
@@ -52,44 +53,45 @@
         <section class="section">
             <div class="container join-grid">
                 <section class="form-panel" aria-labelledby="join-form-title">
-                <h2 id="join-form-title">Adventure interest form</h2>
-                <form id="contact-form" novalidate>
-                    <div class="form-row">
-                        <div class="field">
-                            <label for="name">Name</label>
-                            <input id="name" name="name" type="text" placeholder="Your name"
-                                autocomplete="name" aria-describedby="name-error">
-                            <p class="error-message" id="name-error"></p>
+                    <h2 id="join-form-title">Adventure interest form</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" placeholder="Your name"
+                                    autocomplete="name" aria-describedby="name-error">
+                                <p class="error-message" id="name-error"></p>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="you@example.com"
+                                    autocomplete="email" aria-describedby="email-error">
+                                <p class="error-message" id="email-error"></p>
+                            </div>
                         </div>
+
                         <div class="field">
-                            <label for="email">Email</label>
-                            <input id="email" name="email" type="email" placeholder="you@example.com"
-                                autocomplete="email" aria-describedby="email-error">
-                            <p class="error-message" id="email-error"></p>
+                            <label for="activity">Activity</label>
+                            <select id="activity" name="activity" aria-describedby="activity-error">
+                                <option value="" disabled selected>Choose one</option>
+                                <option>Trail Hike</option>
+                                <option>Lake Paddle</option>
+                                <option>Campfire Night</option>
+                            </select>
+                            <p class="error-message" id="activity-error"></p>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label for="activity">Activity</label>
-                        <select id="activity" name="activity" aria-describedby="activity-error">
-                            <option value="" disabled selected>Choose one</option>
-                            <option>Trail Hike</option>
-                            <option>Lake Paddle</option>
-                            <option>Campfire Night</option>
-                        </select>
-                        <p class="error-message" id="activity-error"></p>
-                    </div>
+                        <div class="field">
+                            <label for="message">What would make you feel prepared?</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your experience level or questions..."></textarea>
+                        </div>
 
-                    <div class="field">
-                        <label for="message">What would make you feel prepared?</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your experience level or questions..."></textarea>
-                    </div>
-
-                    <button class="button" type="submit">Send interest</button>
-                    <p class="form-success" id="form-success" role="status"></p>
-                </form>
+                        <button class="button" type="submit">Send interest</button>
+                        <p class="form-success" id="form-success" role="status"></p>
+                    </form>
+                </section>
             </div>
-      </section>
+    </section>
     </main>
     <footer class="site-footer">
         <div class="container footer-wrap">
