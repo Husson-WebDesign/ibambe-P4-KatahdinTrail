@@ -159,4 +159,4 @@ My goal is for visitors to feel excited about exploring the Katahdin region and 
 
 ---
 
-*Review note: The feedback is based on the publicly visible pages and a desktop view. The form was not submitted, and a full mobile, accessibility, or source-code audit was not performed. The testing requests above are goals for the next version.*
+
