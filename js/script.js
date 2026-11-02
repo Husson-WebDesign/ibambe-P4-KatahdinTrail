@@ -81,27 +81,49 @@ if (contactForm) {
     });
 };
 
-
+// Mobile Navigation
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#main-navigation");
- 
-function setMenuState(isOpen) {
-    navigation.classList.toggle("open", isOpen);
-    menuButton.setAttribute("aria-expanded", isOpen);
-    menuButton.textContent = isOpen ? "Close" : "Menu";
-}
- 
+const mobileLayout = window.matchMedia("(max-width: 600px)");
+
 if (menuButton && navigation) {
+    document.documentElement.classList.add("js"); // CSS only collapses the nav once JS is running
+    menuButton.hidden = false;
+
+    function setMenuState(isOpen) {
+        navigation.classList.toggle("open", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.querySelector(".menu-label").textContent = isOpen ? "Close" : "Menu";
+    }
+
     menuButton.addEventListener("click", function () {
-        setMenuState(!navigation.classList.contains("open"));
+        setMenuState(menuButton.getAttribute("aria-expanded") !== "true");
     });
- 
+
+    // Close after choosing a link on a phone
+    navigation.addEventListener("click", function (event) {
+        if (event.target.closest("a") && mobileLayout.matches) {
+            setMenuState(false);
+        }
+    });
+
     // Escape closes the menu and returns focus to the button
     document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && navigation.classList.contains("open")) {
+        if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
             setMenuState(false);
             menuButton.focus();
         }
     });
+
+    // Click outside the header closes the menu
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".site-header")) setMenuState(false);
+    });
+
+    // Reset when the window crosses the 600px breakpoint
+    mobileLayout.addEventListener("change", function () {
+        const restoreFocus = mobileLayout.matches && navigation.contains(document.activeElement);
+        setMenuState(false);
+        if (restoreFocus) menuButton.focus();
+    });
 }
-console.log(document.querySelector(".menu-toggle"), document.querySelector("#main-navigation"));
