@@ -131,8 +131,11 @@ textarea:focus-visible {
     padding: 12px 18px;
     border-radius: 12px;
 }
+.hero-action{width: auto;}
 .lead { font-size: 1.15rem; color: var(--bg-alt); max-width: 62ch; }
 .button:hover { background: var(--bg-alt); color: var(--accent-color); }
+.lead-about a,.hero-info a{color: var(--accent-color); text-decoration: underline;}
+.lead-about a:hover, .hero-info a:hover{color: var(--text-color);}
 
 .button-secondary {
     background: transparent;
@@ -147,7 +150,7 @@ textarea:focus-visible {
 .hero-about { padding: 58px 0 44px; }
 .hero-about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 42px; align-items: center; }
 .eyebrow-about { text-transform: uppercase; letter-spacing: .16em; font-weight: 900; color: var(--accent-color); font-size: .76rem; }
-.hero-about h1{ font-size: clamp(2.6rem, 6vw, 5.4rem); line-height: .96; margin: 12px 0 20px; letter-spacing: -.06em; }
+.hero-about h1, .hero-action h1{ font-size: clamp(2.6rem, 6vw, 5.4rem); line-height: .96; margin: 12px 0 20px; letter-spacing: -.06em; }
 .lead-about { font-size: 1.15rem; color: var(--muted); max-width: 62ch; }
 .hero-about-img { width:100%; min-height: 460px; border-radius: 28px; box-shadow: var(--shadow); }
 .our-story {
@@ -202,8 +205,8 @@ textarea:focus-visible {
 
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px;}
 .card { background: white; border: 1px solid var(--line); border-radius: var(--radius);   text-align: center;}
-.card img { height: 205px; width: 100%;}
-.card-body { height: 205px;  padding: 20px; background-color: var(--bg-alt); box-shadow: 0 8px 24px rgba(31,48,42,.25);}
+.card img { max-height: 500px; width: 100%;}
+.card-body { max-height: 80%;  padding: 20px; background-color: var(--bg-alt); box-shadow: 0 8px 24px rgba(31,48,42,.25);}
 .card h3 { margin: 0 0 8px; }
 .card p { margin: 0; color: var(--muted); }
 .card-body ul {
@@ -248,6 +251,13 @@ textarea:focus-visible {
 }
 
 .rentals-section { padding: 2rem 0 4rem; }
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;  /* try "center 40%" if the crop cuts off the kayaker */
+}
 
 .notice {
     margin: 0 0 1.5rem;
