@@ -130,8 +130,9 @@ if (menuButton && navigation) {
 
 //Gallery slider
 const slider = document.querySelector(".slider");
-const track = slider.querySelector(".slides");
+
 if (slider) {
+    const track = slider.querySelector(".slides");
     const slides = slider.querySelectorAll(".slide");
     const prevBtn = slider.querySelector(".prev");
     const nextBtn = slider.querySelector(".next");

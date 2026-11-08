@@ -232,7 +232,7 @@ textarea:focus-visible {
     margin: 0;
     padding: 0;
 }
-
+.approach-title { margin: 0 0 1rem; }
 .approach-card {
     background: white;
     border-radius: 16px;
@@ -241,6 +241,7 @@ textarea:focus-visible {
     box-shadow: 0 10px 20px rgba(0, 50, 57, 0.55);
     font-weight: 600;
     color: var(--text-color);
+
 }
 
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px;}
@@ -393,7 +394,7 @@ textarea.invalid { border: 2px solid #B00020; }
     .hero-about-img { min-height: 240px; }
     .hero-actions { flex-direction: column; gap: .75rem; }
     .button { padding: 14px 18px; text-align: center; }
-    .contact-content { width: 80%; margin: 10px auto;}
+    .contact-content { width: 90%; margin:auto;}
     .approach-grid, .card-grid, .card-grid-2 { grid-template-columns: 1fr; }
     .card-body { height: auto; min-height: 205px; }
     .card img { height: 180px; object-fit: cover; }
@@ -401,11 +402,12 @@ textarea.invalid { border: 2px solid #B00020; }
     .info-panel, .form-panel { padding: 20px; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
     .footer-wrap { flex-direction: column; align-items: center; text-align: center; }
+    .action-card{grid-template-columns: 1fr;}
 }
 
 
 
-.gallery-container { padding: 3rem 0 4rem; background: var(--bg-alt); }
+.gallery-container { padding: 3rem 0 4rem; background: var(--bg-color);}
 .gallery-intro { text-align: center; margin: 0 auto 1.5rem; }
 
 .slider { position: relative; max-width: 900px; margin: 0 auto; border-radius: var(--radius); 
