@@ -127,3 +127,31 @@ if (menuButton && navigation) {
         if (restoreFocus) menuButton.focus();
     });
 }
+
+//Gallery slider
+const slider = document.querySelector(".slider");
+const track = slider.querySelector(".slides");
+if (slider) {
+    const slides = slider.querySelectorAll(".slide");
+    const prevBtn = slider.querySelector(".prev");
+    const nextBtn = slider.querySelector(".next");
+    const counter = document.querySelector(".slider-count");
+    let current = 0;
+
+    function showSlide(index) {
+        current = (index + slides.length) % slides.length; // wraps around
+        track.style.transform = "translateX(-" + (current * 100) + "%)";
+        slides.forEach((slide, i) => slide.setAttribute("aria-hidden", i !== current));
+        counter.textContent = (current + 1) + " / " + slides.length;
+    }
+
+    prevBtn.addEventListener("click", () => showSlide(current - 1));
+    nextBtn.addEventListener("click", () => showSlide(current + 1));
+
+    slider.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") showSlide(current - 1);
+        if (e.key === "ArrowRight") showSlide(current + 1);
+    });
+
+    showSlide(0);
+}
