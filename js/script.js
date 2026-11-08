@@ -76,6 +76,7 @@ if (contactForm) {
         } else {
             formSuccess.textContent =
                 "Thank you for your submission!";
+                console.log("Successful Form Submission");
             contactForm.reset();
         }
     });
