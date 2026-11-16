@@ -337,6 +337,7 @@ textarea:focus-visible {
 
 .contact-page .join-grid { max-width: 700px; margin: 30px auto; }
 .info-panel, .form-panel { background: white; border-radius: 22px; padding: 28px; border: 1px solid var(--line); box-shadow: 0 20px 20px rgba(0, 50, 56, 0.45); }
+.rental-form{margin: auto; width: 70%; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 label { display: block; font-weight: 800; margin-bottom: 6px; }
 input, select, textarea { width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; }
