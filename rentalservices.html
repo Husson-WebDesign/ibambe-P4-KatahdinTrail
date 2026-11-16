@@ -48,11 +48,14 @@
                     <img src="images/woman_kayak.svg" alt="A person kayaking">
                     <div class="card-body">
                         <h3>Kayak</h3>
-                        <p>A stable recreational kayak suitable for lakes and calm waterways.</p>
-                        <ul>
-                            <li>Half-Day: $28</li>
-                            <li>Full-Day: $45</li>
-                        </ul>
+                        <p>
+                            A stable recreational kayak suitable for lakes and calm waterways.
+                            <ul>
+                                <li>Half-Day: $28</li>
+                                <li>Full-Day: $45</li>
+                            </ul>
+                        </p>
+                        <a href="#contact-form" class="buttons" data-activity="Kayak">Book a Kayak</a>
                     </div>
                 </article>
                 <article class="card">
@@ -63,9 +66,10 @@
                                 A recreational canoe suitable for two paddlers and relaxed lake or river outings.
                                 <ul>
                                     <li>Half-Day: $35</li>
-                                    <li>Full-Day:$35</li>
+                                    <li>Full-Day:$55</li>
                                 </ul>
                             </p>
+                            <a href="#contact-form" class="buttons" data-activity="Canoe">Book a Canoe</a>
                     </div>
                 </article>
                 <article class="card">
@@ -76,21 +80,61 @@
                                 A beginner-friendly stand-up paddleboard suitable for calm water.
                                 <ul>
                                     <li>Half-Day: $30</li>
-                                    <li>Full-Day:$30</li>
+                                    <li>Full-Day:$50</li>
                                 </ul>
                             </p>
+                            <a href="#contact-form" class="buttons" data-activity="Canoe">Book a paddleboard</a>
                     </div>
                 </article>
             </div>
-        </section>    
-            <footer class="site-footer">
-                <div class="container footer-wrap">
-                    <p> <strong>
-                        &copy; 2026 Katahdin Trail & Paddle.
-                        All rights reserved</p>
-                    <p>Explore locally. Adventure responsibly.</p>
-                    
+        </section>
+        <section class="form-panel" aria-labelledby="join-form-title">
+            <h2 id="join-form-title">Adventure interest form</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name"
+                            autocomplete="name" aria-describedby="name-error">
+                        <p class="error-message" id="name-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com"
+                            autocomplete="email" aria-describedby="email-error">
+                        <p class="error-message" id="email-error"></p>
+                    </div>
                 </div>
-            </footer>
+
+                <div class="field">
+                    <label for="activity">Activity</label>
+                    <select id="activity" name="activity" aria-describedby="activity-error">
+                        <option value="" >Choose one</option>
+                        <option>Kayak</option>
+                        <option>Canoe</option>
+                        <option>Paddleboard</option>
+                    </select>
+                    <label for="quantity">How many boats would you like?</label>
+                    <input type="number" id="quantity" name="quantity" value="0" min="0" max="5" step="1">
+                    <p class="error-message" id="activity-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="message">What would make you feel prepared?</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your experience level or questions..."></textarea>
+                </div>
+                <button class="button" type="submit">Book</button>
+                <p class="form-success" id="form-success" role="status"></p>
+            </form>
+        </section>    
+        <footer class="site-footer">
+            <div class="container footer-wrap">
+                <p> <strong>
+                    &copy; 2026 Katahdin Trail & Paddle.
+                    All rights reserved</p>
+                <p>Explore locally. Adventure responsibly.</p>
+                
+            </div>
+        </footer>
     </body>
 </html>

@@ -180,7 +180,9 @@ textarea:focus-visible {
 .button:hover { background: var(--bg-alt); color: var(--accent-color); }
 .lead-about a,.hero-info a{color: var(--accent-color); text-decoration: underline;}
 .lead-about a:hover, .hero-info a:hover{color: var(--text-color);}
-
+.buttons { padding: 14px 18px; text-align: center; display: inline-block; background: var(--accent-color);
+            color: white; text-decoration: none; font-weight: 800; padding: 12px 18px;border-radius: 12px;}
+.buttons:hover {background: var(--text-color); color: var(--accent-color);}
 .button-secondary {
     background: transparent;
     color: white;
@@ -438,3 +440,4 @@ textarea.invalid { border: 2px solid #B00020; }
     .slider-btn { width: 44px; height: 44px; }
     .slide img { aspect-ratio: 4 / 3; }
 }
+

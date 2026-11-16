@@ -157,3 +157,18 @@ if (slider) {
 
     showSlide(0);
 }
+
+//Rental Services form
+const activitySelect = document.getElementById("activity");
+const quantityInput = document.getElementById("quantity");
+
+document.querySelectorAll("[data-activity]").forEach(function (link) {
+    link.addEventListener("click", function () {
+        activitySelect.value = link.dataset.activity;
+
+        // optional: bump quantity from 0 to 1 so they don't have to
+        if (Number(quantityInput.value) === 0) {
+            quantityInput.value = 1;
+        }
+    });
+});
