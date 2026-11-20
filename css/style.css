@@ -177,7 +177,7 @@ textarea:focus-visible {
     padding: 12px 18px;
     border-radius: 12px;
 }
-.hero-action{width: auto;}
+.hero-action{width: 90%; margin: auto;}
 .lead { font-size: 1.15rem; color: var(--bg-alt); max-width: 62ch; }
 .button:hover { background: var(--bg-alt); color: var(--accent-color); }
 .lead-about a,.hero-info a{color: var(--accent-color); text-decoration: underline;}
