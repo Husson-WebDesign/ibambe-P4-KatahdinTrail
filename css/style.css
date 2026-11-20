@@ -142,7 +142,9 @@ textarea:focus-visible {
 .hero-info h3 { margin: 10px 0; }
 .hero-about-grid > div,
 .hero-action {
+    margin: 20px;
     text-align: center;
+    line-height: 3.5rem;
 }
 .hero-info {
     border: 2px solid var(--accent-color);
@@ -243,101 +245,45 @@ textarea:focus-visible {
     padding: 0;
 }
 .approach-title { margin: 0 0 1rem; }
-.approach-card {
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 50, 57, 0.55);
-    font-weight: 600;
-    color: var(--text-color);
-
-}
+.approach-card { background: white; border-radius: 16px; padding: 1.5rem; text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 50, 57, 0.55); font-weight: 600; color: var(--text-color);}
 
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px;}
-.card { background: white; border: 1px solid var(--line); border-radius: var(--radius);   text-align: center;}
-.card-body { max-height: 80%;  padding: 20px; background-color: var(--bg-alt); box-shadow: 0 8px 24px rgba(31,48,42,.25);}
+.card { background: white; border: 3px solid var(--line); border-radius: var(--radius);   text-align: center;}
+.card-body { max-height: 80%;  padding: 20px; background-color: var(--bg-alt); box-shadow: 0 8px 24px rgba(31,48,42,.25); border-radius: 0px 0px var(--radius) var(--radius);}
 .card h3 { margin: 0 0 8px; }
+.card-grid-2 {  grid-template-columns: repeat(2, 1fr);}
+.card-grid article:hover{border-color: var(--accent-color);}
+.trip-card h3 a:hover{text-decoration: underline var(--accent-color);}
 .card p { margin: 0; color: var(--muted); }
-.card-body ul {
-    list-style: none;
-    margin: 1rem 0 0;
-    padding: 1rem 0 0;
-    border-top: 1px solid var(--bg-alt);
-    display: flex;
-    flex-direction: column;
-}
+.card-body ul { list-style: none; margin: 1rem 0 0; padding: 1rem 0 0; border-top: 1px solid var(--bg-alt);
+    display: flex; flex-direction: column;}
 
-.card-body li {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
-    color: var(--text-color);
-    font-weight: 700;
-}
+.card-body li { display: flex; justify-content: space-between; font-size: 0.95rem;
+    margin-bottom: 0.4rem; color: var(--text-color); font-weight: 700;}
 
-.trip-meta {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .5rem 1.25rem;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    border-top: 1px solid var(--bg-alt);
-    border-bottom: 1px solid var(--bg-alt);
-}
+.trip-meta { flex-wrap: wrap; justify-content: center; gap: .5rem 1.25rem; margin: 1rem 0;
+    padding: 1rem 0; border-top: 1px solid var(--bg-alt); border-bottom: 1px solid var(--bg-alt);}
 .card h3{padding-top: 10px;}
 .price-list li,
-.trip-meta li {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
-    margin: 1.25rem;
-}
-.trip-meta ul{
-    display: flex;
-    flex-direction: column;
-}
+.trip-meta li {display:flex;justify-content:space-between;font-size:0.95rem;margin-bottom:0.4rem; margin:1.25rem;}
+.trip-meta ul{ display: flex; flex-direction: column;}
 
 .rentals-section { padding: 2rem 0 4rem; }
-.card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center; 
-  min-height: 220px;/* try "center 40%" if the crop cuts off the kayaker */
-}
+.card img {display:block;width: 100%;aspect-ratio:4/3;object-fit:cover;object-position:center;min-height:220px; border-radius: var(--radius) var(--radius) 0px 0px;}
 
-.notice {
-    margin: 0 0 1.5rem;
-    padding: 1rem 1.25rem;
-    background: var(--bg-alt);
-    border-left: 6px solid var(--accent-color);
-    border-radius: 12px;
-}
+.notice { margin: 0 0 1.5rem; padding: 1rem 1.25rem; background: var(--bg-alt);
+    border-left: 6px solid var(--accent-color); border-radius: 12px;}
 
-.cta-banner {
-    margin-top: 2rem;
-    padding: 2rem;
-    background: var(--bg-alt);
-    border-radius: 22px;
-    text-align: center;
-}
+.cta-banner { margin-top: 2rem; padding: 2rem; background: var(--bg-alt);
+    border-radius: 22px; text-align: center;}
 
-.trip-card p {
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin: 20px;
-}
-.card-grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-}
+.trip-card p { color: var(--muted); font-size: 0.95rem; margin: 20px;}
+
 
 .contact-page .join-grid { max-width: 700px; margin: 30px auto; }
 .info-panel, .form-panel { background: white; border-radius: 22px; padding: 28px; border: 1px solid var(--line); box-shadow: 0 20px 20px rgba(0, 50, 56, 0.45); }
-.rental-form{margin: auto; width: 70%; }
+.rental-form{margin:20px auto; width: 70%;}
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 label { display: block; font-weight: 800; margin-bottom: 6px; }
 input, select, textarea { width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; }
@@ -417,7 +363,7 @@ textarea.invalid { border: 2px solid #B00020; }
 }
 
 
-
+--Image slider on homepage
 .gallery-container { padding: 3rem 0 4rem; background: var(--bg-color);}
 .gallery-intro { text-align: center; margin: 0 auto 1.5rem; }
 
