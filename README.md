@@ -29,7 +29,7 @@ This project will eventually use:
 - [x] Lab 2 - CSS Design
 - [x] Responsive Design
 - [x] JavaScript
-- [ ] Final Client Website
+- [x] Final Client Website
 
 ## Phase 4 Client Requirements Audit
 
